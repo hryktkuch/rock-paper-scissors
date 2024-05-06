@@ -1,3 +1,8 @@
+let total = 0;
+let win_number = 0;
+let lose_number = 0;
+let draw_number = 0;
+
 const judge_criteria = [
     [0, 1, -1],
     [-1, 0, 1],
@@ -42,19 +47,27 @@ function com_hand(x) {
         $("#com_paper").css("opacity", "0.2")
     }
 
+    total++;
+
     if (judge_criteria[x][random] == 0) {
         $("#draw").css("opacity", "1")
         $("#win").css("opacity", "0.2")
         $("#lose").css("opacity", "0.2")
+        draw_number++;
     } else if (judge_criteria[x][random] == 1) {
         $("#draw").css("opacity", "0.2")
         $("#win").css("opacity", "0.2")
         $("#lose").css("opacity", "1")
+        lose_number++;
     } else {
         $("#draw").css("opacity", "0.2")
         $("#win").css("opacity", "1")
         $("#lose").css("opacity", "0.2")
+        win_number++;
     }
+    console.log(total);
+    console.log(win_number);
+    $("#win_rate").text(Math.round(win_number/total*100) + "% ("+win_number+","+draw_number+","+lose_number+")");
 }
 
 $("#paper").on("click", function() {
