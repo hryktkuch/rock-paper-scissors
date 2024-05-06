@@ -11,10 +11,6 @@ function judge(human){
 }
 */
 
-$("#com_rock").css("opacity","0.2")
-$("#com_scissor").css("opacity", "0.2")
-$("#com_paper").css("opacity", "0.2")
-
 $("#paper").on("click", function() {
     $("#rock").css("opacity", "0.2")
     $("#scissor").css("opacity", "0.2")
