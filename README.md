@@ -27,5 +27,5 @@ https://hryktkuch.github.io/rock-paper-scissors/
 ## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
 - https://qiita.com/ug23/items/4c29dc6fded65766d197
-- <DIV>はブロック要素なので改行される</DIV>
-- <SPAN>はインライン要素なので、改行されない</SPAN>
+- DIVはブロック要素なので改行される
+- SPANはインライン要素なので、改行されない
