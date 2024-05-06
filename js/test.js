@@ -2,7 +2,7 @@
 $("#paper").on("click", function() {
     var random=Math.floor(Math.random()*3);
     if (random == 0) {
-        $("#computer").text("rock")
+        $("#computer").image("rock")
         $("#result").text("You win!")
     } else if (random == 1) {
         $("#computer").text("scissor")
