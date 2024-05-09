@@ -2,6 +2,8 @@ let total = 0;
 let win_number = 0;
 let lose_number = 0;
 let draw_number = 0;
+let lang = 0;
+let human = 3;
 
 const judge_criteria = [
     [0, 1, -1],
@@ -116,5 +118,27 @@ $("#rock").on("mouseout", function() {
         $("#rock").css("opacity", "1")
     } else {
         $("#rock").css("opacity", "0.2")
+    }
+})
+
+$("#language").on("click", function() {
+    if (lang==0) {
+        console.log("英語");
+        lang=1;
+        $("#paper").attr("src", "img/paper.png")
+        $("#com_paper").attr("src", "img/paper.png")
+        $("#rock").attr("src", "img/rock.png")
+        $("#com_rock").attr("src", "img/rock.png")
+        $("#scissor").attr("src", "img/scissors.png")
+        $("#com_scissor").attr("src", "img/scissors.png")
+    } else {
+        console.log("日本語");
+        lang=0;
+        $("#paper").attr("src", "img/janken_pa.png")
+        $("#com_paper").attr("src", "img/janken_pa.png")
+        $("#rock").attr("src", "img/janken_gu.png")
+        $("#com_rock").attr("src", "img/janken_gu.png")
+        $("#scissor").attr("src", "img/janken_choki.png")
+        $("#com_scissor").attr("src", "img/janken_choki.png")
     }
 })
